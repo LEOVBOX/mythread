@@ -1,0 +1,3 @@
+compile command:
+firstly compile project.o
+gcc -o project_name project.o -L. -lmythread -Wl,-rpath,<path to the lib>
