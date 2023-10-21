@@ -4,7 +4,7 @@
 
 
 #define _GNU_SOURCE
-#include "mythread.h"
+#include "../mythread.h"
 #include <sched.h>
 
 
@@ -39,7 +39,7 @@ int mythread_create(mythread_t *mytid, start_routine_t start_routine, void *arg)
 
 	printf("child stack %p; mythread_struct %p; \n", child_stack, thread);
 
-	int child_pid = clone(mythread_startup, child_stack + STACK_SIZE, CLONE_VM | CLONE_FILES | CLONE_THREAD | CLONE_SIGHAND, thread);
+	int child_pid = clone(mythread_startup, child_stack, CLONE_VM | CLONE_FILES | CLONE_THREAD | CLONE_SIGHAND, thread);
 	if (child_pid == -1)
 	{
 		return -1;

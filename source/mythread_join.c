@@ -1,4 +1,4 @@
-#include "mythread.h"
+#include "../mythread.h"
 
 int mythread_join(mythread_t mytid, void** retval)
 {

@@ -1,4 +1,7 @@
+How to compile library:
+just execute Makefile in directory "source" with command: make
+
 How to compile your project using mythread library:
 1. compile project.o (example: gcc -c project.c -o project.o)
-2. compile with linking library
-gcc -o project_name project.o -L. -lmythread -Wl,-rpath,<path to the lib>
+2. compile with linking library: gcc -o project_name project.o -L. -lmythread
+

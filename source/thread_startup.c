@@ -1,4 +1,4 @@
-#include "mythread.h"
+#include "../mythread_internal.h"
 
 int mythread_startup(void* arg)
 {

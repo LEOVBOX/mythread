@@ -2,8 +2,8 @@
 // Created by Леонид Шайхутдинов on 18.10.2023.
 //
 
-#ifndef INC_1_7_MYTHREAD_H
-#define INC_1_7_MYTHREAD_H
+#ifndef MYTHREAD_H
+#define MYTHREAD_H
 
 #include <stdio.h>
 #include <sys/types.h>
@@ -35,4 +35,4 @@ int mythread_join(mythread_t mytid, void** retval);
 	TODO mythread_join()
  */
 
-#endif //INC_1_7_MYTHREAD_H
+#endif //MYTHREAD_H

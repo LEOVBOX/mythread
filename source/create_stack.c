@@ -1,4 +1,4 @@
-#include "mythread.h"
+#include "../mythread.h"
 
 void* create_stack(off_t size, int thread_num)
 {
