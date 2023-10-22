@@ -13,5 +13,6 @@ thread_startup.o: thread_startup.c
 mythread_join.o: mythread_join.c
 	gcc -c mythread_join.c -o mythread_join.o
 
+
 clean:
 	rm *.o

@@ -4,13 +4,15 @@ int mythread_startup(void* arg)
 {
     mythread_t thread = (mythread_t)arg;
 
-	void* retval;
 
 	printf("mythread_startup: starting a thread func for the thread %d\n", thread->mythread_id);
     
-    retval = thread->start_routine(thread->arg);
+    getcontext(&(thread->before_start_routine));
+    printf("thread_startup: cancel %d\n", thread->canceled);
 
-	thread->retval = retval;
+    if (!thread->canceled)
+        thread->retval = thread->start_routine(thread->arg);
+
     thread->exited = 1;
 
 	printf("mythread_startup: waiting for join %d\n", thread->mythread_id);

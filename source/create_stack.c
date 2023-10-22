@@ -1,4 +1,4 @@
-#include "../mythread.h"
+#include "../mythread_internal.h"
 
 void* create_stack(off_t size, int thread_num)
 {
